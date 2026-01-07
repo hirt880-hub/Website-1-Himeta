@@ -7,32 +7,62 @@
     <title>Impressum – HIMETA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pages.css">
+    <style>
+        .legal-page {
+            padding-top: calc(var(--nav-height) + var(--space-16));
+            padding-bottom: var(--space-24);
+            min-height: 100vh;
+        }
+        .legal-content {
+            max-width: 720px;
+        }
+        .legal-content h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: var(--space-12);
+        }
+        .legal-content h2 {
+            font-size: 1.25rem;
+            margin-top: var(--space-10);
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+        .legal-content p {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-4);
+            line-height: 1.7;
+        }
+        .legal-content a {
+            color: var(--accent);
+            transition: opacity var(--transition-fast);
+        }
+        .legal-content a:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" id="nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">HIMETA</span>
+                <div class="logo-mark">HIMETA</div>
             </a>
-            <button class="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü">
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="sortiment.html">Sortiment</a></li>
-                <li><a href="ueber-uns.html">Über Uns</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#sortiment">Sortiment</a></li>
+                <li><a href="index.html#vorteile">Vorteile</a></li>
+                <li><a href="index.html#werkstoffe">Werkstoffe</a></li>
+                <li><a href="index.html#kontakt" class="nav-cta">Anfrage</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Legal Content -->
-    <section class="legal-section">
+    <main class="legal-page">
         <div class="container">
             <div class="legal-content">
                 <h1>Impressum</h1>
@@ -79,19 +109,24 @@
                 <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-main">
                 <div class="footer-brand">
-                    <span class="logo-text">HIMETA</span>
-                    <p>Beschaffung ohne Überraschung</p>
+                    <div class="logo-mark">HIMETA</div>
+                    <p class="footer-tagline">Beschaffung ohne Überraschung</p>
                 </div>
-                <div class="footer-links">
-                    <a href="impressum.html">Impressum</a>
-                    <a href="datenschutz.html">Datenschutz</a>
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h5>Rechtliches</h5>
+                        <ul>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="datenschutz.html">Datenschutz</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -5,142 +5,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HIMETA – Ihr zuverlässiger Partner für Drehteile, Frästeile und Warmpressteile. Beschaffung ohne Überraschung.">
     <title>HIMETA – Drehteile, Frästeile, Warmpressteile</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" id="nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">HIMETA</span>
+                <div class="logo-mark">HIMETA</div>
             </a>
-            <button class="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Menü">
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="sortiment.html">Sortiment</a></li>
-                <li><a href="ueber-uns.html">Über Uns</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#sortiment">Sortiment</a></li>
+                <li><a href="#vorteile">Vorteile</a></li>
+                <li><a href="#werkstoffe">Werkstoffe</a></li>
+                <li><a href="#kontakt" class="nav-cta">Anfrage</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <p class="hero-tagline">Drehteile · Frästeile · Warmpressteile</p>
-                <h1 class="hero-headline">
-                    <span>VERLÄSSLICH.</span>
-                    <span>ERFAHREN.</span>
-                    <span>PROAKTIV.</span>
+                <div class="hero-label">Drehteile · Frästeile · Warmpressteile</div>
+                <h1 class="hero-title">
+                    <span class="title-line">Beschaffung</span>
+                    <span class="title-line title-accent">ohne</span>
+                    <span class="title-line">Überraschung</span>
                 </h1>
-                <p class="hero-claim">Beschaffung ohne Überraschung</p>
-                <a href="kontakt.html" class="btn btn-primary">Ihre Anfrage</a>
+                <p class="hero-subtitle">Verlässlich. Erfahren. Proaktiv.</p>
+                <div class="hero-actions">
+                    <a href="#kontakt" class="btn btn-primary">
+                        <span>Anfrage stellen</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#sortiment" class="btn btn-ghost">Sortiment ansehen</a>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero-teile.png" alt="Präzisionsdrehteile und Frästeile" onerror="this.style.display='none'">
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="images/produkte.png" alt="HIMETA Präzisionsteile – Drehteile, Frästeile, Warmpressteile" class="hero-image">
+                    <div class="hero-image-glow"></div>
+                </div>
             </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </header>
 
-    <!-- Leistungen Übersicht -->
-    <section class="services">
+    <!-- Trust Bar -->
+    <section class="trust-bar">
         <div class="container">
-            <h2 class="section-title">Unser Sortiment</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚙</div>
-                    <h3>Drehteile</h3>
-                    <p>Lang-, Kurz-, Mehrspindel- und Mikrodrehteile von Ø 0,4 mm bis Ø 65 mm</p>
+            <div class="trust-items">
+                <div class="trust-item">
+                    <span class="trust-number">20+</span>
+                    <span class="trust-label">Jahre Erfahrung</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">⬡</div>
-                    <h3>Frästeile</h3>
-                    <p>Standard bis Großformat – bis 1,90 m × 1,00 m</p>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-number">∅ 0,4</span>
+                    <span class="trust-label">bis 65 mm</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>Warmpressteile</h3>
-                    <p>Messing nach Ihrer Spezifikation</p>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-number">100%</span>
+                    <span class="trust-label">Proaktive Kommunikation</span>
                 </div>
-            </div>
-            <div class="services-cta">
-                <a href="sortiment.html" class="btn btn-secondary">Komplettes Sortiment ansehen</a>
             </div>
         </div>
     </section>
 
-    <!-- USP Section -->
-    <section class="usp">
+    <!-- Sortiment Section -->
+    <section class="sortiment" id="sortiment">
         <div class="container">
-            <div class="usp-content">
-                <h2>Warum HIMETA?</h2>
-                <p class="usp-lead">Wir melden uns, <strong>bevor</strong> es Probleme gibt – nicht erst, wenn das Kind in den Brunnen gefallen ist.</p>
-                <ul class="usp-list">
-                    <li>
-                        <span class="usp-marker"></span>
-                        <div>
-                            <strong>Proaktive Kommunikation</strong>
-                            <p>Verzögerungen, Materialengpässe, unklare Zeichnungen – wir sprechen es an, bevor es Ihre Produktion betrifft.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="usp-marker"></span>
-                        <div>
-                            <strong>Langjährige Erfahrung</strong>
-                            <p>Etablierte Lieferantenbeziehungen und tiefes Verständnis für Fertigungsprozesse.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="usp-marker"></span>
-                        <div>
-                            <strong>Breites Netzwerk</strong>
-                            <p>Vom Mikrodrehteil bis zur Großformat-Fräsung – wir finden die richtige Fertigung für Ihr Teil.</p>
-                        </div>
-                    </li>
-                </ul>
-                <a href="ueber-uns.html" class="btn btn-secondary">Mehr über uns</a>
+            <div class="section-header">
+                <span class="section-label">01 — Sortiment</span>
+                <h2 class="section-title">Präzision in<br>jeder Dimension</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Werkstoffe -->
-    <section class="materials">
-        <div class="container">
-            <h2 class="section-title">Werkstoffe</h2>
-            <p class="materials-intro">Alle gängigen zerspanbaren Werkstoffe – auf Anfrage auch Sondermaterialien.</p>
-            <div class="materials-tags">
-                <span>Stahl</span>
-                <span>Edelstahl</span>
-                <span>Messing</span>
-                <span>Aluminium</span>
-                <span>Kupfer</span>
-                <span>Kunststoffe</span>
-                <span>NE-Metalle</span>
-                <span>Hochfeste Stähle</span>
+            
+            <div class="product-grid">
+                <article class="product-card product-card-large">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="product-title">Drehteile</h3>
+                    <p class="product-desc">Vom Mikrodrehteil bis zur Mehrspindelfertigung – präzise gefertigt nach Ihren Anforderungen.</p>
+                    <ul class="product-specs">
+                        <li><strong>Langdrehteile</strong> Ø 3–26 mm, bis 600 mm Länge</li>
+                        <li><strong>Kurzdrehteile</strong> Ø 3–65 mm</li>
+                        <li><strong>Mehrspindel</strong> Ø 5–26 mm</li>
+                        <li><strong>Mikrodrehteile</strong> Ø 0,4–2 mm</li>
+                    </ul>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="8" width="32" height="32" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 24h32M24 8v32" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="product-title">Frästeile</h3>
+                    <p class="product-desc">Standard bis Großformat – komplex und präzise.</p>
+                    <ul class="product-specs">
+                        <li><strong>Standard</strong> 700 × 400 × 550 mm</li>
+                        <li><strong>Großformat</strong> bis 1,90 × 1,00 m</li>
+                    </ul>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L44 14v20L24 44 4 34V14L24 4z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 24v20M24 24L4 14M24 24l20-10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="product-title">Warmpressteile</h3>
+                    <p class="product-desc">Messing nach Ihrer Spezifikation – individuell gefertigt.</p>
+                    <ul class="product-specs">
+                        <li><strong>Werkstoff</strong> Messing</li>
+                        <li><strong>Ausführung</strong> Nach Kundenspezifikation</li>
+                    </ul>
+                </article>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ihre Anfrage</h2>
-            <p>Sie haben eine Zeichnung, ein Muster oder eine Idee?<br>Sprechen Sie mit uns.</p>
-            <div class="cta-contact">
-                <div class="cta-item">
-                    <span class="cta-label">Telefon</span>
-                    <a href="tel:+49XXXXXXXXX" class="cta-value">[Telefonnummer]</a>
+            
+            <div class="extras">
+                <h4 class="extras-title">Zusätzliche Leistungen auf Anfrage</h4>
+                <div class="extras-list">
+                    <span>Drahterodieren</span>
+                    <span>Rundschleifen</span>
+                    <span>Gewindetechnik</span>
+                    <span>Kunststoffspritzguss</span>
                 </div>
-                <div class="cta-item">
-                    <span class="cta-label">E-Mail</span>
-                    <a href="mailto:post@himeta.de" class="cta-value">post@himeta.de</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vorteile Section -->
+    <section class="vorteile" id="vorteile">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">02 — Warum HIMETA</span>
+                <h2 class="section-title">Wir melden uns,<br><em>bevor</em> es brennt</h2>
+            </div>
+            
+            <div class="vorteile-grid">
+                <div class="vorteil-card">
+                    <div class="vorteil-number">01</div>
+                    <h3>Proaktive Kommunikation</h3>
+                    <p>Verzögerungen, Materialengpässe, unklare Zeichnungen – wir sprechen es an, bevor es Ihre Produktion betrifft. Kein Abtauchen, kein Schweigen.</p>
+                </div>
+                
+                <div class="vorteil-card">
+                    <div class="vorteil-number">02</div>
+                    <h3>Langjährige Erfahrung</h3>
+                    <p>Etablierte Beziehungen zu bewährten Fertigungspartnern. Wir kennen die Möglichkeiten – und die Grenzen.</p>
+                </div>
+                
+                <div class="vorteil-card">
+                    <div class="vorteil-number">03</div>
+                    <h3>Breites Netzwerk</h3>
+                    <p>Vom Mikrodrehteil bis zur Großformat-Fräsung – wir finden die richtige Fertigung für Ihr Teil.</p>
+                </div>
+            </div>
+            
+            <div class="quote-block">
+                <blockquote>
+                    „Bei HIMETA haben Sie einen Ansprechpartner, der mitdenkt und vorausschaut. Das macht Ihre Beschaffung planbarer – und Ihren Alltag entspannter."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Werkstoffe Section -->
+    <section class="werkstoffe" id="werkstoffe">
+        <div class="container">
+            <div class="section-header section-header-center">
+                <span class="section-label">03 — Werkstoffe</span>
+                <h2 class="section-title">Alle gängigen<br>zerspanbaren Materialien</h2>
+            </div>
+            
+            <div class="material-cloud">
+                <span class="material material-lg">Stahl</span>
+                <span class="material material-lg">Edelstahl</span>
+                <span class="material material-lg">Messing</span>
+                <span class="material">Aluminium</span>
+                <span class="material">Kupfer</span>
+                <span class="material">Bronze</span>
+                <span class="material">Kunststoffe</span>
+                <span class="material">NE-Metalle</span>
+                <span class="material material-accent">Hochfeste Stähle</span>
+            </div>
+            
+            <p class="werkstoffe-note">Sondermaterialien auf Anfrage – sprechen Sie uns an.</p>
+        </div>
+    </section>
+
+    <!-- CTA / Kontakt Section -->
+    <section class="kontakt" id="kontakt">
+        <div class="container">
+            <div class="kontakt-grid">
+                <div class="kontakt-content">
+                    <span class="section-label">04 — Kontakt</span>
+                    <h2 class="kontakt-title">Ihre Anfrage</h2>
+                    <p class="kontakt-lead">Sie haben eine Zeichnung, ein Muster oder eine Idee? Sprechen Sie mit uns.</p>
+                    
+                    <div class="kontakt-info">
+                        <div class="kontakt-item">
+                            <span class="kontakt-label">Telefon</span>
+                            <a href="tel:+49XXXXXXXXX" class="kontakt-value">[Telefonnummer]</a>
+                        </div>
+                        <div class="kontakt-item">
+                            <span class="kontakt-label">E-Mail</span>
+                            <a href="mailto:post@himeta.de" class="kontakt-value">post@himeta.de</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kontakt-checklist">
+                    <h4>Was wir für ein Angebot brauchen:</h4>
+                    <ul>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Zeichnung (PDF, DXF, STEP) oder Muster
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Gewünschte Stückzahl / Abrufmenge
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Material (falls nicht auf der Zeichnung)
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Wunschtermin
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -149,16 +279,32 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-main">
                 <div class="footer-brand">
-                    <span class="logo-text">HIMETA</span>
-                    <p>Beschaffung ohne Überraschung</p>
+                    <div class="logo-mark">HIMETA</div>
+                    <p class="footer-tagline">Beschaffung ohne Überraschung</p>
                 </div>
-                <div class="footer-links">
-                    <a href="impressum.html">Impressum</a>
-                    <a href="datenschutz.html">Datenschutz</a>
+                
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h5>Navigation</h5>
+                        <ul>
+                            <li><a href="#sortiment">Sortiment</a></li>
+                            <li><a href="#vorteile">Vorteile</a></li>
+                            <li><a href="#werkstoffe">Werkstoffe</a></li>
+                            <li><a href="#kontakt">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Rechtliches</h5>
+                        <ul>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="datenschutz.html">Datenschutz</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>© 2025 HIMETA. Alle Rechte vorbehalten.</p>
             </div>
